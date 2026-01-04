@@ -1,0 +1,71 @@
+##
+# go back directories
+##
+alias ..='cd ../'            # go up one directory
+alias ...='cd ../../'        # go up two directories
+
+##
+# 'ls' / 'lsd' command
+##
+alias ls='ls --color=auto'        # basic listing with color with ls command
+#alias ls='lsd --color=auto'        # basic listing with color with lsd command
+
+alias ll='ls -lh'                 # long listing with human-readable sizes
+alias la='ls -lha'                # long listing including hidden files
+alias lA='ls -lhA'                # long listing, include almost all files
+
+alias lS='ls -lhS'                # sort by size
+alias lt='ls -lht'                # sort by modification time, newest first
+alias lx='ls -lhXB'               # sort by extension
+alias lX='ls -lhX'                # long listing, sort by extension
+alias lAX='ls -lhAX'              # long listing, include almost all files, sort by extension
+alias lAt='ls -lhAt'              # include almost all files, sort by modification time
+alias lAS='ls -lhAS'              # include almost all files, sort by size
+
+alias ld='ls -lhd */'             # list only directories
+alias l.='ls -d .*'               # list only hidden files
+
+##
+# 'rm | cp | mv' commands
+##
+alias rm='rm -vi'               # interactive remove with confirmation
+alias cp='cp -vi'               # interactive copy with confirmation
+alias mv='mv -vi'               # interactive move/rename with confirmation
+
+##
+# 'tree' command
+##
+alias tree='tree -C'            # display directory tree with color
+
+##
+# 'grep | egrep' commands
+##
+alias grep='grep --color=auto'  # highlight matches in grep output
+alias egrep='grep -E --color=auto'  # extended regex grep with color
+
+##
+# 'bat' command
+##
+alias bat='bat -p -n -f --tabs 4'  # pretty print file with line numbers, tabs expanded, syntax highlight
+
+##
+# 'ip' command
+##
+alias ip='ip -c'                 # show network info with color
+
+##
+# 'ping' command
+##
+alias ping='ping -c 3 -W 10'     # send 3 packets, wait max 10 seconds per reply
+
+##
+# secure deletion
+##
+alias shrm='shred -u'            # securely delete files (overwrite before removing)
+
+##
+# aliases management
+##
+alias edit-aliases='nvim ~/.aliases'      # open the aliases file in Neovim for editing
+alias reload-aliases='source ~/.aliases'  # reload aliases without restarting the shell
+
